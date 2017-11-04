@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  
+"-//Apache SoftwareFoundation//DTD Struts Configuration 2.3//EN"  
+"http://struts.apache.org/dtds/struts-2.3.dtd">  
+<struts>
+ <package name="lab2" namespace = "/" extends = "struts-default">
+  
+ <action name= "Add" class="lab2.lab2Action" method = "Add">
+ <result name = "AddAuthor"> /aa.jsp</result>
+ <result name = "SUCCESS"> /home.html</result>
+ </action>
+ 
+  <action name= "AddAuthor" class="lab2.lab2Action" method = "AddAuthor">
+ <result name = "SUCCESS"> /home.html</result>
+ <result name = "Error"> /error.jsp</result>
+ <result name = "author_exist"> /author_exist.jsp</result>
+ </action>
+
+ <action name= "Update" class="lab2.lab2Action" method = "Update" >
+ <result name = "SUCCESS"> /home.html</result>
+ <result name = "AddAuthor"> /aa.jsp</result>
+ </action>
+ 
+ <action name= "Search" class="lab2.lab2Action" method = "Search" >
+ <result name = "SUCCESS"> /se.jsp</result>
+  <result name = "Error"> /not_exist.jsp</result>
+ </action>
+ 
+  <action name= "ShowDB" class="lab2.lab2Action" method = "ShowDB" >
+ <result name = "SUCCESS"> /showdb.jsp</result>
+ </action>
+ 
+  <action name= "Delete" class="lab2.lab2Action" method = "Delete" >
+ <result name = "SUCCESS"> /home.html</result>
+ </action>
+ 
+  <action name= "Detail" class="lab2.lab2Action" method = "Detail" >
+ <result name = "SUCCESS"> /detail.jsp</result>
+ </action>
+ 
+ </package>
+</struts>
